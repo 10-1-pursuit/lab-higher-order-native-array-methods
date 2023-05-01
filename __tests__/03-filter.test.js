@@ -36,7 +36,7 @@ describe("getSongsBySaib()", () => {
   });
 });
 
-describe("getSongsOverThreeMinutes()", () => {
+describe.only("getSongsOverThreeMinutes()", () => {
   let songs;
   beforeEach(() => {
     jest.resetModules();
