@@ -35,7 +35,6 @@ function anySongIsOverFourMinutes(exampleSongData) {
 function anySongIsByPeanut(exampleSongData) {
 	return exampleSongData.some(({ artist }) => artist === 'Peanut');
 }
-console.log(anySongIsByPeanut(exampleSongData));
 
 module.exports = {
 	allSongsAreOverTwoMinutes,
