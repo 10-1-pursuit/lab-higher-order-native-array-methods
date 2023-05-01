@@ -6,13 +6,17 @@
   Keep in mind that your functions must still have and use a parameter for accepting all songs.
 */
 const exampleSongData = require("../data/songs");
-// Do not change the line above.
-
+// Do not change the line above
 /**
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printAllSongTitles(songs) {}
+function printAllSongTitles(songs) {
+  
+  const songTitles = songs.forEach( (eachSongTitle) => {
+    console.log(eachSongTitle.title)
+  })
+}
 
 /**
  * Logs out the song title and song artist.
@@ -24,13 +28,27 @@ function printAllSongTitles(songs) {}
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+function printSongDetails(songs) {
+
+  const songDetails = songs.forEach((songDetails) => {
+    console.log(`${songDetails.title} by ${songDetails.artist}`);
+    
+  })
+}
+
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printSongTitlesOverThreeMinutes(songs) {}
+function printSongTitlesOverThreeMinutes(songs) {
+
+  const avariableThatwillNeverBeUsed = songs.forEach((runTimeOver) => {
+    if(runTimeOver.runtimeInSeconds > 180 ) {
+      console.log(runTimeOver.title);
+    }
+  })
+}
 
 module.exports = {
   printAllSongTitles,
