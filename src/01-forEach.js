@@ -5,14 +5,16 @@
 
   Keep in mind that your functions must still have and use a parameter for accepting all songs.
 */
-const exampleSongData = require("../data/songs");
+const exampleSongData = require('../data/songs');
 // Do not change the line above.
 
 /**
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printAllSongTitles(songs) {}
+function printAllSongTitles(songs) {
+	songs.forEach((song) => console.log(song.title));
+}
 
 /**
  * Logs out the song title and song artist.
@@ -33,7 +35,7 @@ function printSongDetails(songs) {}
 function printSongTitlesOverThreeMinutes(songs) {}
 
 module.exports = {
-  printAllSongTitles,
-  printSongDetails,
-  printSongTitlesOverThreeMinutes,
+	printAllSongTitles,
+	printSongDetails,
+	printSongTitlesOverThreeMinutes,
 };
