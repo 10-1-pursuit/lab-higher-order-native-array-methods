@@ -24,14 +24,15 @@ function findPinkElephantsByTimestreet(exampleSongData) {
 function findFirstSongUnderThreeMinutes(exampleSongData) {
 	return exampleSongData.find((song) => song.runtimeInSeconds < 180);
 }
-console.log(findFirstSongUnderThreeMinutes(exampleSongData));
 
 /**
  * Returns the first song in the list where the song title equals the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(exampleSongData) {}
+function findFirstTitleTrack(exampleSongData) {
+	return exampleSongData.find(({ title, album }) => title === album);
+}
 
 module.exports = {
 	findPinkElephantsByTimestreet,
