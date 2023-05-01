@@ -18,7 +18,6 @@ function sortByRuntimeAscending(exampleSongData) {
 		(a, b) => a.runtimeInSeconds - b.runtimeInSeconds
 	);
 }
-console.log(sortByRuntimeAscending(exampleSongData));
 /**
  * Reorders the array so that the song objects are organized by their artist name. The artist that comes last in the alphabet should come first.
  *
@@ -27,7 +26,18 @@ console.log(sortByRuntimeAscending(exampleSongData));
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByArtistNameDescending(exampleSongData) {}
+function sortByArtistNameDescending(exampleSongData) {
+	return exampleSongData.sort((a, b) => {
+		if (a.artist.toLowerCase() > b.artist.toLowerCase()) {
+			return -1;
+		}
+		if (a.artist.toLowerCase() < b.artist.toLowerCase()) {
+			return 1;
+		}
+		return 0;
+	});
+}
+console.log(sortByArtistNameDescending(exampleSongData));
 
 /**
  * Reorders the array so that the song objects are organized by their song title. The title that comes first in the alphabet should come first.
