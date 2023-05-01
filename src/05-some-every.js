@@ -34,7 +34,7 @@ function anySongIsOverFourMinutes(songs) {
  * @returns {boolean}
  */
 function anySongIsByPeanut(songs){
-  return songs.some((song) => songs.includes(song.artist === "Pea"))
+  return songs.some((song => songs.includes(song.title === "Pea")))
 }
 
 module.exports = {
