@@ -24,14 +24,15 @@ function getSongsBySaib(exampleSongData) {
 function getSongsOverThreeMinutes(exampleSongData) {
 	return exampleSongData.filter((song) => song.runtimeInSeconds > 180);
 }
-console.log(getSongsOverThreeMinutes(exampleSongData));
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getTitleTracks(exampleSongData) {}
+function getTitleTracks(exampleSongData) {
+	return exampleSongData.filter((song) => song.title === song.album);
+}
 
 module.exports = {
 	getSongsBySaib,
