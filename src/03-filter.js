@@ -16,13 +16,15 @@ const exampleSongData = require('../data/songs');
 function getSongsBySaib(exampleSongData) {
 	return exampleSongData.filter((song) => song.artist === 'Saib');
 }
-console.log(getSongsBySaib(exampleSongData));
 /**
  * Returns an array of all songs where the runtime is over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsOverThreeMinutes(exampleSongData) {}
+function getSongsOverThreeMinutes(exampleSongData) {
+	return exampleSongData.filter((song) => song.runtimeInSeconds > 180);
+}
+console.log(getSongsOverThreeMinutes(exampleSongData));
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
