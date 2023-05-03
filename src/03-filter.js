@@ -26,6 +26,8 @@ function getSongsBySaib(songs) {
  */
 function getSongsOverThreeMinutes(songs) {
 
+  let overThreeMin = songs.filter( threeMin => threeMin.runtimeInSeconds > 180);
+  return overThreeMin;
 }
 
 /**
@@ -33,7 +35,10 @@ function getSongsOverThreeMinutes(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getTitleTracks(songs) {}
+function getTitleTracks(songs) {
+  let sameAsTitle = songs.filter(sameAs => sameAs.title === sameAs.album);
+  return sameAsTitle
+}
 
 module.exports = {
   getSongsBySaib,
