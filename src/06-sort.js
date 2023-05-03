@@ -13,30 +13,24 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
- 
-
-function sortByRuntimeAscending(songs){
-    songs.sort(function(a,b){
-        if(a.runtimeInSeconds < b.runtimeInSeconds)
-        return-1;
-        if(a.runtimeInSeconds> b.runtimeInSeconds)
-        return 1;
-        return 0;
-
-
-    });
-
-
-}
-sortByRuntimeAscending(exampleSongData)
-
-// function sortByRuntimeAscending(songs) {
-//   const sortByRuntimeAscending= songs.runtimeInSeconds.sort(element=>{
-// return element = element.runtimeInSeconds<songs.runtimeInSeconds});
-// return sortByRuntimeAscending;
+// function anySongIsOverFourMinutes(songs) {
+//   const anySongIsOverFourMinutes= songs.some(element=>{
+// return element = element.runtimeInSeconds>"240"});
+// return anySongIsOverFourMinutes;
 
 // }
-// console.log(sortByRuntimeAscending(exampleSongData))
+// console.log(anySongIsOverFourMinutes(exampleSongData))
+
+ 
+function sortByRuntimeAscending(songs){
+  const myComparisonFunction = (a,b) => {
+    return element =a.runtimeInSeconds-b.runtimeInSeconds
+  };
+
+    return songs.sort(myComparisonFunction)
+}
+console.log(sortByRuntimeAscending(exampleSongData))
+
 
 
 /**
@@ -47,7 +41,16 @@ sortByRuntimeAscending(exampleSongData)
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByArtistNameDescending(songs) {}
+function sortByArtistNameDescending(songs) {
+ const myCompFunction =(a,b) => {
+  return element= b.artist.toLowerCase() -a.artist.toLowerCase()
+ };
+ return songs.sort(myCompFunction)
+
+}
+sortByArtistNameDescending(exampleSongData)
+
+
 
 /**
  * Reorders the array so that the song objects are organized by their song title. The title that comes first in the alphabet should come first.
@@ -57,7 +60,18 @@ function sortByArtistNameDescending(songs) {}
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortBySongTitleAscending(songs) {}
+
+
+
+function sortBySongTitleAscending(songs) {
+  const myComparisonFunction =(a,b) =>{
+    return element = a.title - b.title
+  };
+    return songs.sort(myComparisonFunction)
+
+
+}
+console.log(sortBySongTitleAscending(exampleSongData))
 
 module.exports = {
   sortByRuntimeAscending,
