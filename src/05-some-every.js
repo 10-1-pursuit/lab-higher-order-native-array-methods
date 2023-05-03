@@ -32,7 +32,7 @@ function anySongIsOverFourMinutes(songs) {
  * @returns {boolean}
  */
 function anySongIsByPeanut(songs) {
-  return songs.some(song => song.artist === "Peanut" )
+  return songs.some(song => song.artist === "Peanut")
 }
 
 module.exports = {

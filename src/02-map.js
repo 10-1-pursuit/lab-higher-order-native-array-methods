@@ -26,8 +26,7 @@ function getSongTitles(songs){ return songs.map(song => song.title)}
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
 function getSongDetails(songs) {
-return songs.map( song => `${song.title} by ${song.artist}`)
-}
+  return songs.map( song => `${song.title} by ${song.artist}`)}
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
