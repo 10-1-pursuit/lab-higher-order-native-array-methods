@@ -66,17 +66,19 @@ getSongDetails(exampleSongData)
 
 
 
+
+
 function getTitleAndArtist(songs) {
 
   const getTitleAndArtist = songs.map(element=>{
                        
-    return element = `${element.title}:${element.artist}`});
+    return element =  `{"${element.title}": "${element.artist}"}`});
 
     return getTitleAndArtist;
 
 }
 
-console.log(getTitleAndArtist(exampleSongData))
+// console.log(getTitleAndArtist(exampleSongData))
 
 // function getTitleAndArtist(songs) {
 

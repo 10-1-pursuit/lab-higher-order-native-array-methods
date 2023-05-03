@@ -13,7 +13,31 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByRuntimeAscending(songs) {}
+ 
+
+function sortByRuntimeAscending(songs){
+    songs.sort(function(a,b){
+        if(a.runtimeInSeconds < b.runtimeInSeconds)
+        return-1;
+        if(a.runtimeInSeconds> b.runtimeInSeconds)
+        return 1;
+        return 0;
+
+
+    });
+
+
+}
+sortByRuntimeAscending(exampleSongData)
+
+// function sortByRuntimeAscending(songs) {
+//   const sortByRuntimeAscending= songs.runtimeInSeconds.sort(element=>{
+// return element = element.runtimeInSeconds<songs.runtimeInSeconds});
+// return sortByRuntimeAscending;
+
+// }
+// console.log(sortByRuntimeAscending(exampleSongData))
+
 
 /**
  * Reorders the array so that the song objects are organized by their artist name. The artist that comes last in the alphabet should come first.
