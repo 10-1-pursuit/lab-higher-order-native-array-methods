@@ -14,12 +14,12 @@ const exampleSongData = require("../data/songs");
  * @returns {Object[]} An array of objects.
  */
 function getSongsBySaib(songs) {
-  let getSong = songs.filter((song) => {
+  return songs.filter((song) => {
   if(song.artist === 'Saib') {
     return song;
   }
 }  );
-return getSong;
+// return getSong;
 }
 /**
  * Returns an array of all songs where the runtime is over three minutes.
@@ -27,12 +27,12 @@ return getSong;
  * @returns {Object[]} An array of objects.
  */
 function getSongsOverThreeMinutes(songs) {
-  let getSong = songs.filter((song) => {
+  return songs.filter((song) => {
   if(song.runtimeInSeconds > 180){
     return song;
   }
 } );
-return getSong;
+// return getSong;
 }
 /**
  * Returns an array of songs where the song title is the same as the song album.
@@ -40,12 +40,12 @@ return getSong;
  * @returns {Object[]} An array of objects.
  */
 function getTitleTracks(songs) {
-  let getSong = songs.filter((song) => {
+  return songs.filter((song) => {
     if(song.title === song.album){
       return song;
     }
   } )
-  return getSong;
+
 }
 
 module.exports = {
