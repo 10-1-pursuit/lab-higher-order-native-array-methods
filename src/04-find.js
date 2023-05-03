@@ -21,10 +21,10 @@ function findPinkElephantsByTimestreet(songs) {
   const  findPinkElephantsByTimestreet = songs.find(element=>{
     return element = element.title==="Pink Elephants"});
     
-    console.log(findPinkElephantsByTimestreet)
+   return findPinkElephantsByTimestreet;
 
 }
-findPinkElephantsByTimestreet(exampleSongData)
+console.log(findPinkElephantsByTimestreet(exampleSongData))
 
 
 
@@ -42,11 +42,11 @@ function findFirstSongUnderThreeMinutes(songs) {
   songs.find(element=>{
     return element = element.runtimeInSeconds < "180"});
     
-    console.log(findFirstSongUnderThreeMinutes)
+    return findFirstSongUnderThreeMinutes;
   
   }
-  findFirstSongUnderThreeMinutes(exampleSongData)
-  
+  console.log(findFirstSongUnderThreeMinutes(exampleSongData))
+
 
 
 
@@ -55,14 +55,17 @@ function findFirstSongUnderThreeMinutes(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(songs){
-  const findFirstTitleTrack = songs.find(element=>{
-    return element = element.title===element.album});
+
+
+  function findFirstTitleTrack(songs){
+    const findFirstTitleTrack=songs.find(element=>{
+      return element = element.title===element.album});
+      
+    return findFirstTitleTrack;
     
-  console.log({findFirstTitleTrack})
-  
-       }
-  findFirstTitleTrack(exampleSongData)
+         }
+    console.log(findFirstTitleTrack(exampleSongData))
+    
 
 module.exports = {
   findPinkElephantsByTimestreet,
