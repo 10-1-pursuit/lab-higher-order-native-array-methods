@@ -15,13 +15,13 @@ const exampleSongData = require("../data/songs");
  */
 function findPinkElephantsByTimestreet(songs) {
 
-let findSong = songs.find((song) => {
+return songs.find((song) => {
 if(song.title === 'Pink Elephants'){
      return song;
 }
 } )
 
-    return findSong;
+    // return findSong;
 }
 
 /**
