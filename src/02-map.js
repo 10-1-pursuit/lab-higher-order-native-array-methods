@@ -15,7 +15,7 @@ const exampleSongData = require("../data/songs");
  */
 function getSongTitles(songs) {
 
-  const getSongTitles = exampleSongData.map((songs)=>{console.log([songs.title])})
+  const getSongTitles = songs.map((songs)=>{console.log([songs.title])})
 }
 getSongTitles(exampleSongData)
 
@@ -30,7 +30,7 @@ getSongTitles(exampleSongData)
  */
 function getSongDetails(songs) {
 
-  const getSongDetails = exampleSongData.map((songs)=>{console.log([songs.title+" by "+songs.artist])})
+  const getSongDetails = songs.map((songs)=>{console.log([songs.title+" by "+songs.artist])})
 
 }
 getSongDetails(exampleSongData)
