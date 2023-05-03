@@ -14,17 +14,16 @@ const exampleSongData = require("../data/songs");
  * @returns {Object[]} An array of objects.
  */
 
+// 
+
 
   console.log("==============================Funtion 1")
-
   function getSongsBySaib(songs){
-    const getSongsBySaib = songs.filter((songs)=>{if (songs.artist==="Saib")(console.log([songs]))})
+    const getSongsBySaib = songs.filter(element=>{
+      return element = element.artist==="Saib"});
+      return getSongsBySaib;
           }
     getSongsBySaib(exampleSongData)
-      
-
-
-
 
 
 /**
@@ -36,13 +35,18 @@ const exampleSongData = require("../data/songs");
  * 
  */
 
+
 console.log("==============================Funtion 2")
 
 function getSongsOverThreeMinutes(songs) {
-  const getSongsOverThreeMinutes= songs.filter((songs)=>{if (songs.runtimeInSeconds>"180")(console.log([songs]))})
+  const getSongsOverThreeMinutes= songs.filter(element=>{
+return element = element.runtimeInSeconds>"180"});
+return getSongsOverThreeMinutes;
 
 }
-getSongsOverThreeMinutes(exampleSongData)
+console.log(getSongsOverThreeMinutes(exampleSongData))
+
+
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
@@ -53,10 +57,15 @@ getSongsOverThreeMinutes(exampleSongData)
 console.log("==============================Funtion 3")
 
 function getTitleTracks(songs) {
-const getTitleTracks = songs.filter((songs)=>{if(songs.title===songs.album)(console.log([songs]))})
+const getTitleTracks = songs.filter(element=>{
+  
+  return element= element.title===element.album});
+  
+  return getTitleTracks;
 
 }
-getTitleTracks(exampleSongData)
+console.log(getTitleTracks(exampleSongData))
+
 
 
 module.exports = {
