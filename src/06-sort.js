@@ -51,6 +51,8 @@ function sortBySongTitleAscending(songs) {
   })
   return songsThatStartWithA
 }
+sortBySongTitleAscending(exampleSongData)
+
 
 module.exports = {
   sortByRuntimeAscending,
