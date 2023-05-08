@@ -11,8 +11,25 @@ const exampleSongData = require("../data/songs");
 /**
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
+ * ARRAY - "songs" loop title
  */
-function printAllSongTitles(songs) {}
+function printAllSongTitles(songs) {
+    const songtitle = songs.forEach (
+    (eachtitle) => {console.log(eachtitle.title)
+  })
+}
+  // console.log(songtitle)
+  // songs.title.forEach()
+/*
+const eachKingValue = arrayOfKings.forEach(
+
+    (eachKing) => {
+        // do somthing : put at check name to each king
+        console.log(`🗡️ ${eachKing.name}`)
+    }
+
+ )
+*/
 
 /**
  * Logs out the song title and song artist.
@@ -24,13 +41,36 @@ function printAllSongTitles(songs) {}
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+function printSongDetails(songs) {
+
+  const songDetails = songs.forEach((songDetails) => {
+    console.log(`${songDetails.title} by ${songDetails.artist}`);
+    
+  })
+}
+//      const artistOfSong= songs.forEach (
+//     (eachArtist) => {console.log(eachArtist.artist)
+//       const songtitle = songs.forEach ( 
+//     (eachtitle) => {console.log(eachtitle.title)
+//   }
+//   )
+// }
+// )
+// }
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printSongTitlesOverThreeMinutes(songs) {}
+function printSongTitlesOverThreeMinutes(songs) {
+
+  const avariableThatwillNeverBeUsed = songs.forEach((runTimeOver) => {
+    if(runTimeOver.runtimeInSeconds > 180 ) {
+      console.log(runTimeOver.title);
+    }
+  })
+}  // const nonCalledVar= runtimeInSeconds
+
 
 module.exports = {
   printAllSongTitles,
