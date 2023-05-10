@@ -13,21 +13,59 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findPinkElephantsByTimestreet(songs) {}
 
-/**
+
+
+function findPinkElephantsByTimestreet(songs) {
+
+  const  findPinkElephantsByTimestreet = songs.find(element=>{
+    return element = element.title==="Pink Elephants"});
+    
+   return findPinkElephantsByTimestreet;
+
+}
+console.log(findPinkElephantsByTimestreet(exampleSongData))
+
+
+
+
+/**  
+          
  * Returns the first song in the list that is under three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstSongUnderThreeMinutes(songs) {}
+
+
+function findFirstSongUnderThreeMinutes(songs) {
+  const findFirstSongUnderThreeMinutes = 
+  songs.find(element=>{
+    return element = element.runtimeInSeconds < "180"});
+    
+    return findFirstSongUnderThreeMinutes;
+  
+  }
+  console.log(findFirstSongUnderThreeMinutes(exampleSongData))
+
+
+
 
 /**
  * Returns the first song in the list where the song title equals the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(songs) {}
+
+
+  function findFirstTitleTrack(songs){
+    const findFirstTitleTrack=songs.find(element=>{
+      return element = element.title===element.album});
+      
+    return findFirstTitleTrack;
+    
+         }
+    console.log(findFirstTitleTrack(exampleSongData))
+    
 
 module.exports = {
   findPinkElephantsByTimestreet,

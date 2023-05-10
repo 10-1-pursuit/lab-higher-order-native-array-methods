@@ -1,3 +1,6 @@
+
+
+
 /*
   Do not change the line below. If you'd like to run code from this file, you may use the `exampleSongData` variable below to gain access to tickets data. This data is pulled from the `data/songs.js` file.
 
@@ -12,7 +15,16 @@ const exampleSongData = require("../data/songs");
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printAllSongTitles(songs) {}
+//const printAllSongTitles = exampleSongDatas.forEach((songs)=>{console.log([songs.title])})
+console.log("===================first function")
+
+function printAllSongTitles(songs){     
+  
+  const printAllSongTitles = songs.forEach((songs)=>{console.log(songs.title)})
+      }
+  printAllSongTitles(exampleSongData)
+  
+
 
 /**
  * Logs out the song title and song artist.
@@ -24,16 +36,33 @@ function printAllSongTitles(songs) {}
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+
+//const printSongDetails = exampleSongData.forEach((songs)=>{console.log(songs.title+" by "+songs.artist)})
+console.log("========================SECOND FUNCTION")
+function printSongDetails(songs) {
+
+const printSongDetails = songs.forEach((songs)=>{console.log(songs.title+" by "+songs.artist)})
+        }
+        printSongDetails(exampleSongData)
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printSongTitlesOverThreeMinutes(songs) {}
+console.log("=========================3rd FUNCTION")
 
+//const printSongTitlesOverThreeMinutes = exampleSongData.forEach((songs)=>{if (songs.runtimeInSeconds>180)(console.log(songs.title))})
+
+
+//console.log("============================3rdFunctionClone")
+
+function printSongTitlesOverThreeMinutes(songs) {
+const printSongTitlesOverThreeMinutes = songs.forEach((songs)=>{if (songs.runtimeInSeconds>180)(console.log(songs.title))})
+}
+printSongTitlesOverThreeMinutes(exampleSongData)
 module.exports = {
-  printAllSongTitles,
+ printAllSongTitles,
   printSongDetails,
   printSongTitlesOverThreeMinutes,
 };
+
