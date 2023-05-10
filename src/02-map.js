@@ -78,15 +78,8 @@ function getTitleAndArtist(songs) {
 
 }
 
-// console.log(getTitleAndArtist(exampleSongData))
+console.log(getTitleAndArtist(exampleSongData))
 
-// function getTitleAndArtist(songs) {
-
-//   const getSongDetails = songs.map((songs)=>{console.log([songs.title+": "+songs.artist])})
-
-// }
-
-// getTitleAndArtist(exampleSongData)
 
 module.exports = {
   getSongTitles,
