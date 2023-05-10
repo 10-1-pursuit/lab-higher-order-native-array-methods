@@ -42,10 +42,19 @@ console.log(sortByRuntimeAscending(exampleSongData))
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
- const myCompFunction =(a,b) => {
-  return element= b.artist.toLowerCase() -a.artist.toLowerCase()
- };
- return songs.sort(myCompFunction)
+ const myCompFunction =songs.sort((a,b) => {
+  if(a.artist.toLowerCase() < b.artist.toLowerCase()){
+    return -1;
+  }else
+  if (a.artist.toLowerCase() > b.artist.toLowerCase()){
+      return 1;
+  }else{
+    return 0;
+
+  }
+   
+ });
+ return myCompFunction
 
 }
 sortByArtistNameDescending(exampleSongData)
