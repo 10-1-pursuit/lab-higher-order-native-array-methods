@@ -52,7 +52,7 @@ function getSongDetails(songs) {
 function getTitleAndArtist(songs) {
   let titleAndArtistArrayObj = songs.map(
     (songArtistsAndTitles)=>{
-      return songArtistsAndTitles.title, songArtistsAndTitles.titles
+      return songArtistsAndTitles.title, songArtistsAndTitles.artist
     }
   )
   return titleAndArtistArrayObj;
